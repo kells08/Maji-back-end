@@ -1,4 +1,4 @@
-#Maji
+# Maji
 
 
 Maji is an app that serves the dual purpose of a water source locator and group-funding mechanism, allowing the needs of both types of clients to be met.
