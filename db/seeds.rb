@@ -9,7 +9,7 @@
 allUsers = {
   "users": [
     {
-      "fullname": "Kelly Lwakatare", 
+      "name": "Kelly Lwakatare", 
       "username": "kells",
       "password": "hello", 
       "phone": "555-555-5555",
@@ -18,7 +18,7 @@ allUsers = {
       "city": "Houston", 
       "state": "TX", 
       "country": "United States", 
-      "postal_code": "77777"
+      "postcode": "77777"
     }
   ]
 }
@@ -26,17 +26,14 @@ allUsers = {
 allProducts = {
   "products": [
     {
-      "img": "", 
       "title": "Droplet Necklace", 
       "description": "Water droplet pendant in sterling silver on a 26 inch chain. Teardrop is 29 mm long.",
       "price": 65 },
     {
-      "img": "", 
       "title": "Droplet Earrings", 
       "description": "Water droplet hoop earrings in sterling silver, for pierced ears. 45 mm long.",
       "price": 45 },
     {
-      "img": "", 
       "title": "Droplet Tee", 
       "description": "Water droplet printed on a high-quality 100% cotton, classic fitted, crew neck, short sleeve adult unisex t-shirt.",
       "price": 20 }
@@ -50,7 +47,6 @@ allProducts = {
         "city": "Usangi",
         "country": "Tanzania",
         "details": "east of B1",
-        "img": "",
         "active": true,
         "hours": "24/7" },
       {
@@ -59,7 +55,6 @@ allProducts = {
         "city": "Mwanga",
         "country": "Tanzania",
         "details": "B1 bridge",
-        "img": "",
         "active": true,
         "hours": "24/7" }, 
       {
@@ -68,7 +63,6 @@ allProducts = {
         "city": "Mwanga",
         "country": "Tanzania",
         "details": "east of B1, near the old house",
-        "img": "",
         "active": true,
         "hours": "24/7" },
       {
@@ -77,7 +71,6 @@ allProducts = {
         "city": "Mwanga",
         "country": "Tanzania",
         "details": "west of B1, near the new house",
-        "img": "",
         "active": true,
         "hours": "24/7" },
       {
@@ -86,7 +79,6 @@ allProducts = {
         "city": "Mwanga",
         "country": "Tanzania",
         "details": "west of B1 near the largest tree",
-        "img": "",
         "active": true,
         "hours": "24/7" }, 
       {
@@ -95,8 +87,11 @@ allProducts = {
         "city": "Kifaru",
         "country": "Tanzania",
         "details": "kifaru chini, next to the pharmacy",
-        "img": "",
         "active": true,
         "hours": "7am-2pm" }
     ]
   }
+
+  allUsers[:users].each do |user|
+    User.create(user)
+  end

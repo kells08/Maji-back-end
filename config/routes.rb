@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   resources :users
   resources :projects
   resources :water_locations
+
+  post '/login', to: 'auth#create'
+  get '/profile', to: 'users#profile'
+
   
 end
