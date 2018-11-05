@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def profile
-    render json: { user: User.new(current_user) }, status: :accepted
+    render json: { user: (current_user) }, status: :accepted
   end
 
   # POST /users
@@ -53,5 +53,5 @@ class UsersController < ApplicationController
     def user_params
       params.permit(:name, :username, :password, :phone, :email, :street, :city, :state, :country, :postcode)
     end
-    
+
 end

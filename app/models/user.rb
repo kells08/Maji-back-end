@@ -3,4 +3,6 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   has_many :user_locations
   has_many :water_locations, through: :user_locations
+  has_many :purchases
+  has_many :products, through: :purchases
 end

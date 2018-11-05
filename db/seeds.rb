@@ -95,3 +95,12 @@ allProducts = {
   allUsers[:users].each do |user|
     User.create(user)
   end
+
+
+  allProducts[:products].each do |product|
+    Product.create(product)
+  end
+
+  allWaterLocations[:waterLocations].each do |waterLocation|
+    WaterLocation.create(waterLocation)
+  end
