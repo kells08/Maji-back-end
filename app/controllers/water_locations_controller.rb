@@ -36,16 +36,22 @@ class WaterLocationsController < ApplicationController
   # DELETE /water_locations/1
   def destroy
     water_location.destroy
+    render json: water_location
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_water_location
-      water_location = WaterLocation.find(params[:id])
+      @water_location = WaterLocation.find(params[:id])
+    end
+
+    def water_location
+      @water_location
     end
 
     # Only allow a trusted parameter "white list" through.
     def water_location_params
-      params.fetch(:water_location, {})
+      # params.require(:water_location).permit()
+      params.permit(water_location: {})[:water_location]
     end 
 end

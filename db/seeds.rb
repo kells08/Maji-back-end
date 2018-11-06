@@ -39,6 +39,30 @@ allProducts = {
       "price": 20 }
   ]}
 
+  # these projects are not yet seeded!!  (done afterward)
+  allProjects = {
+    "projects": [
+      {
+        "title": "Dental Hygiene",
+        "city": "Sanya Juu",
+        "description": "Teach our rural communities the importance of dental care and hygiene.",
+        "details": "Rural communities are often unaware of the importance of daily dental care. This project allows us to provide toothbrushes and toothpaste to residents, in addition to an instructional demonstration on proper brushing techniques.",   
+        "fund1": "A $5 contribution will provide toothbrushes, toothpaste, and floss for 2 people.",
+        "fund2": "A $10 contribution will provide toothbrushes, toothpaste, and floss for 1 family, or 6 people",
+        "fund3": "A $20 contribution will provide toothbrushes, toothpaste, and floss for about 2 families, or 15 people",
+      },
+      {
+        "title": "",
+        "city": "",
+        "description": "",
+        "details": "",
+        "fund1": "",
+        "fund2": "",
+        "fund3": ""
+      }
+    ]
+  }
+
   allWaterLocations = {
     "waterLocations": [
       {
@@ -95,7 +119,6 @@ allProducts = {
   allUsers[:users].each do |user|
     User.create(user)
   end
-
 
   allProducts[:products].each do |product|
     Product.create(product)
