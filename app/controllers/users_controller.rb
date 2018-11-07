@@ -20,13 +20,9 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    user = User.new(user_params)
-    token = encode_token({ 'user_id': user.id})
-    if user.save
+    user = User.create(user_params)
+    token = encode_token({ user_id: user.id })
       render json: { user: user, jwt: token }, status: :created
-    else
-      render json: { error: 'failed to create user' }, status: :not_acceptable
-    end
   end
 
   # PATCH/PUT /users/1
@@ -49,7 +45,6 @@ class UsersController < ApplicationController
       user = User.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def user_params
       params.permit(:name, :username, :password, :phone, :email, :street, :city, :state, :country, :postcode)
     end
