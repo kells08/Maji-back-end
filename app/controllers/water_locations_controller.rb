@@ -4,8 +4,7 @@ class WaterLocationsController < ApplicationController
   # GET /water_locations
   def index
     water_locations = WaterLocation.all
-
-    render json: water_locations
+    render json: water_locations, get_image_url: get_image_url
   end
 
   # GET /water_locations/1
@@ -18,7 +17,7 @@ class WaterLocationsController < ApplicationController
     water_location = WaterLocation.new(water_location_params)
 
     if water_location.save
-      render json: water_location, status: :created, location: water_location
+      render json: water_location, get_image_url: get_image_url, status: :created, location: water_location
     else
       render json: water_location.errors, status: :unprocessable_entity
     end
