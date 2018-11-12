@@ -24,9 +24,12 @@ class WaterLocationsController < ApplicationController
   end
 
   # PATCH/PUT /water_locations/1
+  # image_url is the callback from app controller 
+  # get_image_url is called from app controller and returns the callback (PROC!)
   def update
     if water_location.update(water_location_params)
-      render json: water_location
+    image_url = get_image_url
+    render json: water_location, get_image_url: image_url
     else
       render json: water_location.errors, status: :unprocessable_entity
     end
@@ -36,6 +39,7 @@ class WaterLocationsController < ApplicationController
   def destroy
     water_location.destroy
     render json: water_location
+
   end
 
   private
