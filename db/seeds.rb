@@ -27,28 +27,28 @@ allItems = {
   "items": [
     {
       "title": "Droplet Necklace", 
-      "image_url": "http://localhost:3000/public/pendant.jpeg",
+      "image_url": "http://localhost:3001/public/pendant.jpeg",
       "description": "Water droplet pendant in sterling silver on a 26 inch chain. Droplet is 29 mm long.",
       "details": "Available for international shipment.",
       "price": 65,
       "category": "product" },
     {
       "title": "Droplet Earrings", 
-      "image_url": "http://localhost:3000/public/earrings.jpeg",
+      "image_url": "http://localhost:3001/public/earrings.jpeg",
       "description": "Water droplet hoop earrings in sterling silver, for pierced ears. 45 mm long.",
       "details": "Available for international shipment.",
       "price": 45,
       "category": "product" },
     {
       "title": "Droplet Tee", 
-      "image_url": "http://localhost:3000/public/tee.jpg",
+      "image_url": "http://localhost:3001/public/tee.jpg",
       "description": "Water droplet printed on a high-quality 100% cotton, classic fitted, crew neck, short sleeve adult unisex t-shirt. Specify size in checkout.",
       "details": "Available for international shipment.",
       "price": 20,
       "category": "product" },
     {
       "title": "Dental Hygiene",
-      "image_url": "http://localhost:3000/public/toothbrush.png",
+      "image_url": "http://localhost:3001/public/toothbrush.png",
       "description": "Teach our rural communities the importance of dental care and hygiene.",
       "details": "Current City: Sanya Juu, Tanzania. 
       Rural communities are often unaware of the importance of daily dental care. This project allows us to provide toothbrushes, toothpaste and floss to residents, in addition to an instructional demonstration on proper brushing techniques. 
@@ -59,7 +59,7 @@ allItems = {
       "category": "project" },
     {
       "title": "Water Purification",
-      "image_url": "http://localhost:3000/public/pills.png",
+      "image_url": "http://localhost:3001/public/pills.png",
       "description": "Provide water sanitation tablets to rural residents.",
       "details": "Current City: Bukoba, Tanzania. 
       Water from sources such as collected rain, rivers, lakes, wells, or similar can breed many diseases. These effervescent water purification tablets kill micro-organisms to help prevent cholera, typhoid, dysentery and other water borne disease in the communities that rely on these water sources. 
@@ -70,7 +70,7 @@ allItems = {
       "category": "project" },
     {
       "title": "Malaria Treatment",
-      "image_url": "http://localhost:3000/public/medicine.png",
+      "image_url": "http://localhost:3001/public/medicine.png",
       "description": "Supply malaria tablets to rural clinics.",
       "details": "Current City: Ibwera, Tanzania. 
       Malaria is a preventable and treatable disease transmitted by mosquitos that affects half a billion people worldwide each year. Proper treatment to eradicate the parasite from the body is crucial for preventing death and preventing transmission of the disease. 
