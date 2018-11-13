@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_09_212310) do
+ActiveRecord::Schema.define(version: 2018_11_13_051511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,39 +36,39 @@ ActiveRecord::Schema.define(version: 2018_11_09_212310) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "contributions", force: :cascade do |t|
+  create_table "cart_items", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "project_id"
+    t.bigint "items_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_contributions_on_project_id"
-    t.index ["user_id"], name: "index_contributions_on_user_id"
+    t.index ["items_id"], name: "index_cart_items_on_items_id"
+    t.index ["user_id"], name: "index_cart_items_on_user_id"
   end
 
-  create_table "products", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
+  create_table "donations", force: :cascade do |t|
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "projects", force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.string "title"
-    t.string "img"
+    t.string "image_url"
     t.string "description"
-    t.integer "funds"
+    t.string "details"
+    t.string "price"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "purchases", force: :cascade do |t|
+  create_table "user_donations", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "product_id"
+    t.bigint "donation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_purchases_on_product_id"
-    t.index ["user_id"], name: "index_purchases_on_user_id"
+    t.index ["donation_id"], name: "index_user_donations_on_donation_id"
+    t.index ["user_id"], name: "index_user_donations_on_user_id"
   end
 
   create_table "user_locations", force: :cascade do |t|
@@ -100,7 +100,6 @@ ActiveRecord::Schema.define(version: 2018_11_09_212310) do
     t.string "pluscode"
     t.string "city"
     t.string "country"
-    t.string "img"
     t.string "details"
     t.boolean "active"
     t.string "hours"
